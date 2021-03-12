@@ -7,8 +7,8 @@
 class Node : public NodeInterface {
 
 	public:
-		Node();
-		~Node();
+		Node(int newData, Node* newLeft = NULL, Node* newRight = NULL);
+		~Node() {};
 
 		/*
 		* Returns the data that is stored in this node
