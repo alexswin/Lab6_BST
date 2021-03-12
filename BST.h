@@ -42,13 +42,24 @@ class BST : public BSTInterface {
 		*/
 		void clear();
 
+	protected:
+		Node* root;
+	
+	private:
 		/*
 		* Removes all nodes from the (sub)tree with root subRoot, resulting in an empty subtree.
 		*/
-		void clear(Node* subRoot);
+		void clear(Node* &subRoot);
 
-	protected:
-		Node* root;
+		/*
+		* Attempts to add given data to subtree with root subRoot
+		*/
+		bool add(int data, Node* &subRoot);
+
+		/*
+		* Attempts to remove given data from subtree with root subRoot
+		*/
+		bool remove(int data, Node* &subRoot);
 };
 
 #endif
